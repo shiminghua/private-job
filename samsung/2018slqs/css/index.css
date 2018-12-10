@@ -325,34 +325,42 @@ body {
   float: right;
 }
 .mainBox .maseger .Result .Computer {
-  width: 4rem;
-  height: 3rem;
+  width: 5rem;
+  height: 3.3rem;
   margin: auto;
   position: absolute;
   top: 50%;
   left: 50%;
   margin-top: -2.8rem;
-  margin-left: -2rem;
+  margin-left: -2.5rem;
 }
 .mainBox .maseger .Result .Computer img {
   width: 100%;
   height: 100%;
 }
 .mainBox .maseger .Result .Anterior4 {
-  height: 3.5rem;
+  width: 5rem;
+  height: 3.8rem;
   margin-top: -3rem;
+  margin-left: -2.5rem;
 }
 .mainBox .maseger .Result .Anterior3 {
-  height: 4rem;
-  margin-top: -3rem;
+  width: 4.3rem;
+  height: 4.2rem;
+  margin-top: -3.3rem;
+  margin-left: -2.1rem;
 }
 .mainBox .maseger .Result .Anterior2 {
-  height: 4rem;
-  margin-top: -3.5rem;
+  width: 4.6rem;
+  height: 3.5rem;
+  margin-top: -3rem;
+  margin-left: -2.3rem;
 }
 .mainBox .maseger .Result .Anterior1 {
-  height: 4rem;
-  margin-top: -3.5rem;
+  width: 4.3rem;
+  height: 3.5rem;
+  margin-top: -2.6rem;
+  margin-left: -2.15rem;
 }
 .mainBox .maseger .Result .aperture {
   width: 6rem;
@@ -397,6 +405,14 @@ body {
   width: 1.6rem;
   height: 0.37rem;
 }
+.mainBox .maseger .Result .Preservation {
+  width: 100%;
+  position: absolute;
+  bottom: 1.3rem;
+  font-size: .22rem;
+  text-align: center;
+  color: #fff;
+}
 .mainBox .maseger .text {
   width: 4rem;
   height: 2rem;
@@ -428,4 +444,14 @@ body {
 .mainBox .maseger .Jump img {
   width: 100%;
   height: 100%;
+}
+.screenshot {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
 }

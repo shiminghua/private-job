@@ -111,9 +111,9 @@ $("#TopicFive li").on("click", function () {
     // $(".Result").css({ "display": "block" })
 
 });
-
-$(".Result").on("click", function () {
+$(".screenshot").on("click", function () {
     this.style.display = "none";
+    $(".Result").css("display","none")
     $("#maseger").css({ "background-image": "url(./images/note6/bg5.png)" });
     $("#text").css("display", "block");
     $("#text>img").addClass("animated zoomInUp");
@@ -196,6 +196,7 @@ function chooseTopic(callback) {
 chooseTopic(function (id, selected) {
     console.log('----', id, selected);
     $(id).show();
+    $(id + '-img').show();
     $("#maseger").css({ "background-image": "url(./images/note5/bg4.png)" });
     let animate1 = $(id + ">.Template>img");
     let animateArr = ["animated bounceInLeft", "animated bounceInRight", "animated fadeInDown"];
@@ -218,4 +219,7 @@ chooseTopic(function (id, selected) {
             $(id + ">.aperture>.Right>img").eq(1).addClass("animated rotateInUpRight").css("display", "block");
         }, i * 500)
     }
+    setInterval(() => {
+            $(".Result span").css("display", "block");
+        }, 1000)
 });

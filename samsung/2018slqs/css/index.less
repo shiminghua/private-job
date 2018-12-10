@@ -320,6 +320,7 @@ html,body{
           display: none; 
           margin: auto;
           position: relative;
+          
           .Template{
               img{
                   display: none;
@@ -337,33 +338,43 @@ html,body{
          }
          
          .Computer{
-             width: 4rem;
-             height: 3rem;
+             width: 5rem;
+             height: 3.3rem;
              margin: auto;
              position: absolute;
              top: 50%;
              left: 50%;
              margin-top: -2.8rem;
-             margin-left: -2rem;
+             margin-left: -2.5rem;
              img{
                  width: 100%;
-                 height: 100%;                  }
+                 height: 100%;                  
+                }
          }
          .Anterior4{
-             height: 3.5rem;
-             margin-top: -3rem
+             width: 5rem;
+             height: 3.8rem;
+             margin-top: -3rem;
+             margin-left: -2.5rem;
          }
          .Anterior3{
-            height: 4rem;
-            margin-top: -3rem
+            width: 4.3rem;
+            height: 4.2rem;
+            margin-top: -3.3rem;
+            margin-left: -2.1rem;
+
         }
         .Anterior2{
-            height: 4rem;
-            margin-top: -3.5rem
+            width: 4.6rem;
+            height: 3.5rem;
+            margin-top: -3rem;
+            margin-left: -2.3rem
         }
         .Anterior1{
-            height: 4rem;
-            margin-top: -3.5rem
+            width: 4.3rem;    
+            height: 3.5rem;
+            margin-top: -2.6rem;
+            margin-left: -2.15rem;
         }
          .aperture{
              width: 6rem;
@@ -406,8 +417,16 @@ html,body{
                   height: 0.37rem;
                  }
              }
+             
          }
-
+               .Preservation{
+                 width: 100%;
+                 position: absolute;
+                 bottom: 1.3rem;
+                 font-size: .22rem;
+                 text-align: center;
+                 color: #fff;
+                }
          }
          .text{
              width: 4rem;
@@ -443,4 +462,15 @@ html,body{
         }
      }
      
+}
+
+.screenshot{
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none
 }
