@@ -1,29 +1,39 @@
+/**
+ * 判断图片全部加载完成
+ * @param {array} imgArr 图片地址的数组
+ * @param {function} callback 图片全部加载完成后的回调
+ * 
+ * @return undefined  无返回值
+ */
+function imagesIsAllLoaded(imgArr, callback) {
+    let imgs = [];
+    let len = imgArr.length;
+    let flag = 0;
+
+    for (let i = 0; i < len; i++) {
+        imgs[i] = new Image();
+        imgs[i].onload = function () {
+            flag++;
+            if (flag >= len) {
+                callback && callback(imgs);
+            }
+        };
+        imgs[i].src = imgArr[i];
+    }
+}
 ~function () {
-    var t_img;
-    var isLoad = true;
-    isImgLoad(function () {
+
+    let imgArr = [];
+    $('img').each((index, image) => {
+        imgArr.push(image.src);
+    });
+
+    imgArr.push('images/bg.jpg','images/bg2.jpg');
+    imagesIsAllLoaded(imgArr, (imgs) => {
         $("#loading").css("display", "none");
         First();
     });
-    function isImgLoad(callback) {
-        $('img').each(function () {
-            if (this.height === 0) {
-                isLoad = false;
-                return false;
-            }
-        });
-        if (isLoad) {
-            clearTimeout(t_img);
-            setTimeout(function () {
-                callback();
-            }, 500);
-        } else {
-            isLoad = true;
-            t_img = setTimeout(function () {
-                isImgLoad(callback);
-            }, 500);
-        }
-    }
+
 }();
 function First() {
     $("#Home>.header>.title>img").addClass("animated bounceInLeft");
@@ -33,7 +43,7 @@ function First() {
         $("#Home>.center>img").eq(0).addClass("animated zoomInDown");
         $("#Home>.center>img").eq(1).addClass("animated flip");
     }, 800);
-    
+
 }
 
 $("#Home").on("click", function () {
@@ -47,7 +57,7 @@ $("#Home").on("click", function () {
                     $("#box").css("display", "none")
                     $("#Article").css("display", "none");
                     $("#start").css("opacity", 0);
-                    $("#maseger").css({ "background-image": "url(./images/bg3.png)" });
+                    $("#maseger").css({ "background-image": "url(./images/bg3.jpg)" });
                     $("#Answer").css("display", "block");
                     var listLength = $("#Answer li").length;
                     for (let i = 0; i < listLength; i++) {
@@ -113,8 +123,8 @@ $("#TopicFive li").on("click", function () {
 });
 $(".screenshot").on("click", function () {
     this.style.display = "none";
-    $(".Result").css("display","none")
-    $("#maseger").css({ "background-image": "url(./images/note6/bg5.png)" });
+    $(".Result").css("display", "none")
+    $("#maseger").css({ "background-image": "url(./images/note6/bg5.jpg)" });
     $("#text").css("display", "block");
     $("#text>img").addClass("animated zoomInUp");
     $("#Jump").animate({ opacity: 1 }, 2000);
@@ -197,7 +207,7 @@ chooseTopic(function (id, selected) {
     console.log('----', id, selected);
     $(id).show();
     $(id + '-img').show();
-    $("#maseger").css({ "background-image": "url(./images/note5/bg4.png)" });
+    $("#maseger").css({ "background-image": "url(./images/note5/bg4.jpg)" });
     let animate1 = $(id + ">.Template>img");
     let animateArr = ["animated bounceInLeft", "animated bounceInRight", "animated fadeInDown"];
     for (let i = 0, len = animate1.length; i < len; i++) {
@@ -220,6 +230,6 @@ chooseTopic(function (id, selected) {
         }, i * 500)
     }
     setInterval(() => {
-            $(".Result span").css("display", "block");
-        }, 1000)
+        $(".Result span").css("display", "block");
+    }, 1000)
 });
