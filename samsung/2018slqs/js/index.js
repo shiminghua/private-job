@@ -1,3 +1,6 @@
+
+
+
 /**
  * 判断图片全部加载完成
  * @param {array} imgArr 图片地址的数组
@@ -28,7 +31,7 @@ function imagesIsAllLoaded(imgArr, callback) {
         imgArr.push(image.src);
     });
 
-    imgArr.push('images/bg.jpg','images/bg2.jpg');
+    imgArr.push('images/bg.jpg', 'images/bg2.jpg');
     imagesIsAllLoaded(imgArr, (imgs) => {
         $("#loading").css("display", "none");
         First();
@@ -48,29 +51,47 @@ function First() {
 
 $("#Home").on("click", function () {
     this.style.display = "none";
-    var myTest = $('#maseger'), pItems = myTest.find('.a1');
-    pItems.eq(0).animate({ width: "5rem" }, 1000, function () {
-        pItems.eq(1).animate({ width: "5rem" }, 1000, function () {
-            pItems.eq(2).animate({ width: "5rem" }, 1000, function () {
-                $("#start").animate({ opacity: 1 }, 1000);
-                $("#button").on("click", function () {
-                    $("#box").css("display", "none")
-                    $("#Article").css("display", "none");
-                    $("#start").css("display", "none");
-                    $("#maseger").css({ "background-image": "url(./images/bg3.jpg)" });
-                    $("#Answer").css("display", "block");
-                    var listLength = $("#Answer li").length;
-                    for (let i = 0; i < listLength; i++) {
-                        setInterval(() => {
-                            $("#Answer li").eq(i).addClass("animated bounceInRight").css("display", "block")
-                        }, i * 300)
-                    }
-                })
-            });
+        $("#arrow").css("display", "none")
+        var myTest = $('#maseger'), pItems = myTest.find('.B');
+        pItems.eq(0).animate({ height: "3rem" }, 2500, function () {
+            $("#start").animate({ opacity: 1 }, 600);
+            $("#button").on("click", function () {
+                $("#box").css("display", "none")
+                $("#Article").css("display", "none");
+                $("#start").css("display", "none");
+                $("#maseger").css({ "background-image": "url(./images/bg3.jpg)" });
+                $("#Answer").css("display", "block");
+                var listLength = $("#Answer li").length;
+                for (let i = 0; i < listLength; i++) {
+                    setInterval(() => {
+                        $("#Answer li").eq(i).addClass("animated bounceInRight").css("display", "block")
+                    }, i * 300)
+                }
+            })
         });
-    });
-});
 
+});
+$("#arrow").on("click", function () {
+    $("#Home").css("display", "none");
+    this.style.display = "none";
+    var myTest = $('#maseger'), pItems = myTest.find('.B');
+    pItems.eq(0).animate({ height: "3rem" }, 2500, function () {
+        $("#start").animate({ opacity: 1 }, 600);
+        $("#button").on("click", function () {
+            $("#box").css("display", "none")
+            $("#Article").css("display", "none");
+            $("#start").css("display", "none");
+            $("#maseger").css({ "background-image": "url(./images/bg3.jpg)" });
+            $("#Answer").css("display", "block");
+            var listLength = $("#Answer li").length;
+            for (let i = 0; i < listLength; i++) {
+                setInterval(() => {
+                    $("#Answer li").eq(i).addClass("animated bounceInRight").css("display", "block")
+                }, i * 300)
+            }
+        })
+    });
+})
 $("#Answer li").on("click", function () {
     $("#Answer").css({ "display": "none" });
     $("#TopicTwo").css({ "display": "block" })
@@ -121,18 +142,25 @@ $("#TopicFive li").on("click", function () {
     // $(".Result").css({ "display": "block" })
 
 });
-$(".screenshot").click(function(e){
-    console.log(e.target.className)
-        if(e.target.className=="screenshot"){
-            this.style.display = "none";
-            $(".Result").css("display", "none")
-            $("#maseger").css({ "background-image": "url(./images/note6/bg5.jpg)" });
-            $("#text").css("display", "block");
-            $("#text>img").addClass("animated zoomInUp");
-            $("#Jump").css("display", "block");
-            $("#Jump").animate({ opacity: 1}, 2000);
-        }
-}) 
+
+$(".screenshot").click(function (e) {
+    e.preventDefault()
+    if (e.target.className == "screenshot") {
+
+    }
+})
+
+touch.on(".screenshot", "tap", function () {
+    this.style.display = "none";
+    $(".Result").css("display", "none")
+    $("#maseger").css({ "background-image": "url(./images/note6/bg5.jpg)" });
+    $("#text").css("display", "block");
+    $("#text>img").addClass("animated zoomInUp");
+    $("#Jump").css("display", "block");
+    $("#Jump").animate({ opacity: 1 }, 2000);
+});
+
+
 function chooseTopic(callback) {
     let selected = {
         a: 0,
@@ -206,6 +234,7 @@ function chooseTopic(callback) {
 }
 
 chooseTopic(function (id, selected) {
+    $("#arrow").css("display", "block")
     console.log('----', id, selected);
     $(id).show();
     $(id + '-img').show();

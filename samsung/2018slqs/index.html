@@ -26,6 +26,21 @@
             window.addEventListener("resize", componted, false);
         }();
     </script>
+
+
+    <div class="icon_audio border_anim" id="musicButton">
+        <i class="icon-music-outer">
+            <i class="forbid icon-music"></i>
+            <audio loop autoplay="autoplay" controls id="bgMusic" src="./audio/audio.mp3">
+            </audio>
+        </i>
+    </div>
+
+
+
+
+
+
     <main class="mainBox">
         <section class="loading" id="loading">
             <div class="circleContainer">
@@ -58,7 +73,7 @@
                 </div>
             </div>
             <div class="Article" id="Article">
-                <ul>
+                <ul class="B">
                     <li class="a1">
                         <p>最初的电竞</p>
                         <p>是一颗渺小的彗星</p>
@@ -133,7 +148,7 @@
             </div>
 
             <section class="Result" id="Result5">
-                
+
                 <div class="Star Template">
                     <img class="title1" src="./images/note5/title1.png" alt="">
                     <img class="title2" src="./images/note5/title2.png" alt="">
@@ -237,7 +252,8 @@
             <section class="text" id="text">
                 <img src="./images/note6/text.png" alt="">
             </section>
-            <a class="Jump" href="###" id="Jump">
+            <a class="Jump" href="https://shop.m.jd.com/?shopId=1000000288&utm_source=iosapp&utm_medium=appshare&utm_campaign=t_335139774&utm_term=CopyURL&ad_od=share&ShareTm=VQrVT/hTOGfEEyn1BOjhPjG5oIg4cdbxDwW0%2BVF20Pd223DaVHAo7EJcmHRMfMKfIuef1tXUn4wYmY2lwBgq2BV%2BD27C2aMWyOktsOh2kGd3mE%2BvbmlIgcpAn4MUqhuTOE7KtEIJ3F7Pi0nDfDI6xR1ty3BLI1DTPkfKgZpXKc8="
+                id="Jump">
                 <img src="./images/note6/Jump.png" alt="">
             </a>
         </section>
@@ -247,9 +263,43 @@
         <img class="screenshot" id='Result3-img' src="./images/Reserve/screenshot03.jpg" alt="">
         <img class="screenshot" id='Result2-img' src="./images/Reserve/screenshot02.jpg" alt="">
         <img class="screenshot" id='Result1-img' src="./images/Reserve/screenshot01.jpg" alt="">
+        <img id="arrow" src="./images/arrow.png" alt="">
     </main>
 </body>
 <script src="./js/jquery.js"></script>
+<script src="./js/touch.min.js"></script>
 <script src="./js/index.js"></script>
+
+<script>
+    var $music = $('.icon-music-outer');
+    var $forbid = $music.find('.forbid');
+    var audio = document.getElementById('bgMusic');
+    function audioAutoPlay(audio) {
+        document.addEventListener("WeixinJSBridgeReady", function () {
+            audio.play();
+        }, false);
+        document.addEventListener('YixinJSBridgeReady', function () {
+            audio.play();
+        }, false);
+    }
+
+    audioAutoPlay(audio);
+
+    $music.on('click', function () {
+        if ($forbid.hasClass('icon-music')) {
+            $forbid.removeClass('icon-music').addClass('icon-forbidMusic');
+        } else {
+            $forbid.removeClass('icon-forbidMusic').addClass('icon-music');
+        }
+
+        if (audio.paused) {
+            audio.play();
+            return
+        }
+        audio.pause();
+    });
+
+
+</script>
 
 </html>

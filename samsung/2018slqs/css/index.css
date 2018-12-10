@@ -15,6 +15,68 @@ body {
   overflow: hidden;
   background: #000000;
 }
+/* .icon-music-outer{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    position: fixed;
+    right: 5px;
+    top: 10px;
+    font-size: 25px;
+    color: #ffda51;
+}
+.forbid{
+    display: inline-block;
+    font-size: 25px;
+    width: 25px;
+    height: 25px;
+}
+.icon-forbidMusic{
+    display: inline-block;
+    font-size: 25px;
+    width: 25px;
+    height: 25px;
+    color: #d0f2fc;
+    z-index: 101;
+}
+audio{
+    position: absolute;
+    left: -300px;
+}
+ */
+.icon_audio {
+  width: .6rem;
+  height: .6rem;
+  position: absolute;
+  z-index: 999;
+  top: 10%;
+  right: 2%;
+  opacity: 0.7;
+  background: url("../audio/on_off4.png") no-repeat;
+  background-size: 100% 100%;
+  animation: lds-hourglass 1s ease-in-out infinite;
+}
+.icon_audio .icon-music-outer {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.icon_audio .icon-music-outer .forbid {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+audio {
+  display: none;
+}
+@keyframes lds-hourglass {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .mainBox {
   width: 100%;
   height: 100%;
@@ -202,13 +264,13 @@ body {
   padding-top: .80rem;
   overflow: hidden;
 }
+.mainBox .maseger .Article .B {
+  height: 0;
+}
 .mainBox .maseger .Article .a1 {
-  width: 0;
-  margin-bottom: .20rem;
-  overflow: hidden;
+  margin-bottom: .30rem;
 }
 .mainBox .maseger .Article .a1 p {
-  width: 5rem;
   text-align: center;
   font-size: .22rem;
   color: #ffffff;
@@ -406,12 +468,11 @@ body {
   height: 0.37rem;
 }
 .mainBox .maseger .Result .Preservation {
-  width: 100%;
   position: absolute;
-  bottom: 1.3rem;
+  bottom: 1.34rem;
   font-size: .22rem;
-  text-align: center;
   color: #fff;
+  right: .5rem;
 }
 .mainBox .maseger .text {
   width: 4rem;
@@ -445,6 +506,38 @@ body {
 .mainBox .maseger .Jump img {
   width: 100%;
   height: 100%;
+}
+.mainBox .screenshot {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+.mainBox #arrow {
+  display: block;
+  width: 6.7%;
+  position: absolute;
+  left: 50%;
+  margin-left: -3.35%;
+  z-index: 10;
+  top: 97%;
+  opacity: 0;
+  -webkit-animation: audio_anim 1.5s linear 0s infinite alternate;
+}
+@-webkit-keyframes audio_anim {
+  0% {
+    opacity: 0.3;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.3;
+  }
 }
 .screenshot {
   opacity: 0;
