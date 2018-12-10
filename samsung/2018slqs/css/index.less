@@ -13,48 +13,23 @@ html,body{
     overflow: hidden;
     background: #000000;
 }
-/* .icon-music-outer{
-    display: inline-block;
-    width: 25px;
-    height: 25px;
-    position: fixed;
-    right: 5px;
-    top: 10px;
-    font-size: 25px;
-    color: #ffda51;
-}
-.forbid{
-    display: inline-block;
-    font-size: 25px;
-    width: 25px;
-    height: 25px;
-}
-.icon-forbidMusic{
-    display: inline-block;
-    font-size: 25px;
-    width: 25px;
-    height: 25px;
-    color: #d0f2fc;
-    z-index: 101;
-}
-audio{
-    position: absolute;
-    left: -300px;
-}
- */
 
+ audio{
+    display: none;
+ }
  .icon_audio{
      width: .6rem;
      height: .6rem;
      position: absolute;
      z-index: 999;
-     top: 10%;
+     top: 9%;
      right: 2%;
      opacity: 0.7;
      background: url("../audio/on_off4.png") no-repeat;
      background-size: 100% 100%;
-      animation: lds-hourglass 1s ease-in-out infinite;
-
+     -webkit-animation:loadRotate 1s linear infinite;
+     -webkit-animation-fill-mode:both;
+     animation:loadRotate 1s linear infinite;
     .icon-music-outer{
         display: block;
         width: 100%;
@@ -66,19 +41,15 @@ audio{
         }
     }
  } 
-       audio{
-           display: none;
-        }
- @keyframes lds-hourglass {
-	0% {
-	   transform:rotate(0);
-      }
-     
-      100% {
-	    transform:rotate(360deg)
-           }
- }
-
+       
+ @keyframes loadRotate{
+    from{
+      transform:rotateZ(0deg);
+    }
+    to{
+      transform:rotateZ(360deg);
+    }
+  }
 .mainBox{
     width: 100%;
     height: 100%;
@@ -563,16 +534,15 @@ audio{
             opacity: 0.3;
         }
     }
-    
+    .screenshot{
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 10000;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none
+    }
 }
 
-.screenshot{
-    opacity: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 10000;
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: none
-}

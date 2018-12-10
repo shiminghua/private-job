@@ -1,5 +1,33 @@
 
+~function(){
+    var $music = $('.icon-music-outer');
+    var $forbid = $music.find('.forbid');
+    var audio = document.getElementById('bgMusic');
+    function audioAutoPlay(audio) {
+        document.addEventListener("WeixinJSBridgeReady", function () {
+            audio.play();
+        }, false);
+        document.addEventListener('YixinJSBridgeReady', function () {
+            audio.play();
+        }, false);
+    }
 
+    audioAutoPlay(audio);
+
+    $music.on('click', function () {
+        if ($forbid.hasClass('icon-music')) {
+            $forbid.removeClass('icon-music').addClass('icon-forbidMusic');
+        } else {
+            $forbid.removeClass('icon-forbidMusic').addClass('icon-music');
+        }
+
+        if (audio.paused) {
+            audio.play();
+            return
+        }
+        audio.pause();
+    });
+}();
 
 /**
  * 判断图片全部加载完成
@@ -143,16 +171,12 @@ $("#TopicFive li").on("click", function () {
 
 });
 
-$(".screenshot").click(function (e) {
-    e.preventDefault()
-    if (e.target.className == "screenshot") {
 
-    }
-})
 
 touch.on(".screenshot", "tap", function () {
     this.style.display = "none";
     $(".Result").css("display", "none")
+    $("#arrow").css("display", "none")
     $("#maseger").css({ "background-image": "url(./images/note6/bg5.jpg)" });
     $("#text").css("display", "block");
     $("#text>img").addClass("animated zoomInUp");

@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/animate.min.css">
 </head>
-
 <body>
     <script>
         ~function () {
@@ -26,8 +25,6 @@
             window.addEventListener("resize", componted, false);
         }();
     </script>
-
-
     <div class="icon_audio border_anim" id="musicButton">
         <i class="icon-music-outer">
             <i class="forbid icon-music"></i>
@@ -35,12 +32,6 @@
             </audio>
         </i>
     </div>
-
-
-
-
-
-
     <main class="mainBox">
         <section class="loading" id="loading">
             <div class="circleContainer">
@@ -269,37 +260,4 @@
 <script src="./js/jquery.js"></script>
 <script src="./js/touch.min.js"></script>
 <script src="./js/index.js"></script>
-
-<script>
-    var $music = $('.icon-music-outer');
-    var $forbid = $music.find('.forbid');
-    var audio = document.getElementById('bgMusic');
-    function audioAutoPlay(audio) {
-        document.addEventListener("WeixinJSBridgeReady", function () {
-            audio.play();
-        }, false);
-        document.addEventListener('YixinJSBridgeReady', function () {
-            audio.play();
-        }, false);
-    }
-
-    audioAutoPlay(audio);
-
-    $music.on('click', function () {
-        if ($forbid.hasClass('icon-music')) {
-            $forbid.removeClass('icon-music').addClass('icon-forbidMusic');
-        } else {
-            $forbid.removeClass('icon-forbidMusic').addClass('icon-music');
-        }
-
-        if (audio.paused) {
-            audio.play();
-            return
-        }
-        audio.pause();
-    });
-
-
-</script>
-
 </html>
