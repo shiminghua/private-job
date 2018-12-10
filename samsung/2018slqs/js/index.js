@@ -56,7 +56,7 @@ $("#Home").on("click", function () {
                 $("#button").on("click", function () {
                     $("#box").css("display", "none")
                     $("#Article").css("display", "none");
-                    $("#start").css("opacity", 0);
+                    $("#start").css("display", "none");
                     $("#maseger").css({ "background-image": "url(./images/bg3.jpg)" });
                     $("#Answer").css("display", "block");
                     var listLength = $("#Answer li").length;
@@ -121,17 +121,19 @@ $("#TopicFive li").on("click", function () {
     // $(".Result").css({ "display": "block" })
 
 });
-$(".screenshot").on("click", function () {
-    this.style.display = "none";
-    $(".Result").css("display", "none")
-    $("#maseger").css({ "background-image": "url(./images/note6/bg5.jpg)" });
-    $("#text").css("display", "block");
-    $("#text>img").addClass("animated zoomInUp");
-    $("#Jump").animate({ opacity: 1 }, 2000);
-})
-
+$(".screenshot").click(function(e){
+    console.log(e.target.className)
+        if(e.target.className=="screenshot"){
+            this.style.display = "none";
+            $(".Result").css("display", "none")
+            $("#maseger").css({ "background-image": "url(./images/note6/bg5.jpg)" });
+            $("#text").css("display", "block");
+            $("#text>img").addClass("animated zoomInUp");
+            $("#Jump").css("display", "block");
+            $("#Jump").animate({ opacity: 1}, 2000);
+        }
+}) 
 function chooseTopic(callback) {
-    // 每个答案的选择次数
     let selected = {
         a: 0,
         b: 0,

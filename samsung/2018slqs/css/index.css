@@ -13,7 +13,7 @@ html,
 body {
   height: 100%;
   overflow: hidden;
-  background: #f4f4f4;
+  background: #000000;
 }
 .mainBox {
   width: 100%;
@@ -435,6 +435,7 @@ body {
   height: 1.6rem;
   left: 50%;
   margin-left: -2rem;
+  display: none;
   opacity: 0;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
   -webkit-user-select: none;
