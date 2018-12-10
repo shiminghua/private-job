@@ -28,9 +28,9 @@ audio {
   opacity: 0.7;
   background: url("../audio/on_off4.png") no-repeat;
   background-size: 100% 100%;
-  -webkit-animation: loadRotate 1s linear infinite;
+  -webkit-animation: loadRotate 2s linear infinite;
   -webkit-animation-fill-mode: both;
-  animation: loadRotate 1s linear infinite;
+  animation: loadRotate 2s linear infinite;
 }
 .icon_audio .icon-music-outer {
   display: block;
@@ -445,7 +445,7 @@ audio {
   bottom: 1.34rem;
   font-size: .22rem;
   color: #fff;
-  right: .5rem;
+  left: .5rem;
 }
 .mainBox .maseger .text {
   width: 4rem;
@@ -494,10 +494,9 @@ audio {
   display: block;
   width: 6.7%;
   position: absolute;
-  left: 50%;
-  margin-left: -3.35%;
   z-index: 10;
-  top: 97%;
+  bottom: 1%;
+  right: 1%;
   opacity: 0;
   -webkit-animation: audio_anim 1.5s linear 0s infinite alternate;
 }

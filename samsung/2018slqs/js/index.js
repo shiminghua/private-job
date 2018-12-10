@@ -81,7 +81,7 @@ $("#Home").on("click", function () {
     this.style.display = "none";
         $("#arrow").css("display", "none")
         var myTest = $('#maseger'), pItems = myTest.find('.B');
-        pItems.eq(0).animate({ height: "3rem" }, 2500, function () {
+        pItems.eq(0).animate({ height: "3rem" }, 5000, function () {
             $("#start").animate({ opacity: 1 }, 600);
             $("#button").on("click", function () {
                 $("#box").css("display", "none")
