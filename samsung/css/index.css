@@ -1,0 +1,431 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+ul,
+li {
+  list-style: none;
+}
+html {
+  font-size: 100px;
+}
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+  background: #f4f4f4;
+}
+.mainBox {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+.mainBox .loading {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 10;
+  overflow: hidden;
+}
+.mainBox .loading .circleContainer {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  background: black;
+}
+.mainBox .loading .circleContainer .circle1 {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -60px;
+  margin-left: -60px;
+  border-color: #2187e7 transparent;
+  border-width: 10px;
+  border-style: solid;
+  border-radius: 100px;
+  box-shadow: 0 0 50px #2187e7;
+  -webkit-animation: animation 2s linear 0s infinite alternate;
+}
+.mainBox .loading .circleContainer .circle2 {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -36px;
+  margin-top: -36px;
+  border-color: #2187e7 transparent;
+  border-width: 6px;
+  border-style: solid;
+  border-radius: 60px;
+  box-shadow: 0 0 105px #2187e7;
+  -webkit-animation: animation2 1s linear 0s infinite alternate;
+}
+.mainBox .loading .circleContainer .circleFont {
+  height: 2rem;
+  line-height: 2rem;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  margin-top: -1rem;
+  text-align: center;
+  color: rgba(0, 183, 229, 0.5);
+  width: 100%;
+  font-size: .22rem;
+}
+@-webkit-keyframes animation {
+  30% {
+    -webkit-transform: rotate(360deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+  }
+}
+@-webkit-keyframes animation2 {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+.mainBox .Home,
+.mainBox .maseger {
+  overflow: hidden;
+  display: block;
+}
+.mainBox .Home {
+  height: 100%;
+  overflow: hidden;
+  background: url("../images/bg.png") no-repeat;
+  background-size: 100% 100%;
+}
+.mainBox .Home .header {
+  width: 100%;
+  height: 1.2rem;
+  position: relative;
+}
+.mainBox .Home .header .title {
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  margin-top: -0.7rem;
+  margin-left: -50%;
+}
+.mainBox .Home .header .title img {
+  width: 2rem;
+  height: .6rem;
+}
+.mainBox .Home .header .logo {
+  position: absolute;
+  top: 50%;
+  right: 55%;
+  margin-top: -0.7rem;
+  margin-right: -50%;
+}
+.mainBox .Home .header .logo img {
+  width: 2rem;
+  height: .6rem;
+}
+.mainBox .Home .center {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 5rem;
+  height: 2rem;
+  display: none;
+}
+.mainBox .Home .center .top-img {
+  float: left;
+  width: 3rem;
+  height: .9rem;
+  margin-left: .3rem;
+  margin-bottom: .2rem;
+}
+.mainBox .Home .center .buttom-img {
+  float: right;
+  width: 3rem;
+  height: .9rem;
+  margin-right: .3rem;
+}
+.mainBox .maseger {
+  background: url("../images/bg2.png") no-repeat;
+  background-size: 100% 100%;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.mainBox .maseger .header {
+  width: 100%;
+  height: 1.2rem;
+  position: relative;
+}
+.mainBox .maseger .header .title {
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  margin-top: -0.7rem;
+  margin-left: -50%;
+}
+.mainBox .maseger .header .title img {
+  width: 2rem;
+  height: .6rem;
+}
+.mainBox .maseger .header .logo {
+  position: absolute;
+  top: 50%;
+  right: 55%;
+  margin-top: -0.7rem;
+  margin-right: -50%;
+}
+.mainBox .maseger .header .logo img {
+  width: 2rem;
+  height: .6rem;
+}
+.mainBox .maseger .Article {
+  width: 5rem;
+  height: 5rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  padding-top: .80rem;
+  overflow: hidden;
+}
+.mainBox .maseger .Article .a1 {
+  width: 0;
+  margin-bottom: .20rem;
+  overflow: hidden;
+}
+.mainBox .maseger .Article .a1 p {
+  width: 5rem;
+  text-align: center;
+  font-size: .22rem;
+  color: #ffffff;
+}
+.mainBox .maseger #start {
+  width: 3rem;
+  height: 2rem;
+  position: absolute;
+  left: 50%;
+  bottom: 2rem;
+  margin-left: -1.5rem;
+  opacity: 0 ;
+}
+.mainBox .maseger #start .box {
+  width: 3rem;
+  height: 2rem;
+  position: relative;
+}
+.mainBox .maseger #start .box img {
+  width: 100%;
+  height: 100%;
+}
+.mainBox .maseger #start .box p {
+  margin-top: -1.4rem;
+  text-align: center;
+  color: #aa8563;
+  font-size: .22rem;
+  transform: rotate(-5deg);
+}
+.mainBox .maseger .Answer {
+  width: 6rem;
+  height: 5rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  text-align: center;
+  display: none;
+}
+.mainBox .maseger .Answer .Topic1 {
+  text-align: center;
+  font-weight: 300;
+  font-size: .4rem;
+  color: #fff;
+}
+.mainBox .maseger .Answer .list {
+  width: 4rem;
+  margin: .2rem auto;
+}
+.mainBox .maseger .Answer .list li {
+  height: 1rem;
+  text-align: center;
+  position: relative;
+  display: none;
+}
+.mainBox .maseger .Answer .list li span {
+  font-size: .32rem;
+  line-height: 1rem;
+  color: #fff;
+  position: absolute;
+  right: .7rem;
+}
+.mainBox .maseger .Answer .list li:nth-child(1) {
+  background: url("../images/a.png") no-repeat;
+  background-size: 100% 100%;
+}
+.mainBox .maseger .Answer .list li:nth-child(2) {
+  background: url("../images/b.png") no-repeat;
+  background-size: 100% 100%;
+}
+.mainBox .maseger .Answer .list li:nth-child(3) {
+  background: url("../images/c.png") no-repeat;
+  background-size: 100% 100%;
+}
+.mainBox .maseger .Answer .list li:nth-child(4) {
+  background: url("../images/d.png") no-repeat;
+  background-size: 100% 100%;
+}
+.mainBox .maseger .Answer .list li:nth-child(5) {
+  background: url("../images/e.png") no-repeat;
+  background-size: 100% 100%;
+}
+.mainBox .maseger #TopicTwo .list li span,
+.mainBox .maseger #TopicSan .list li span,
+.mainBox .maseger #TopicSan .list li span {
+  left: .2rem;
+}
+.mainBox .maseger #TopicSi .list li span {
+  left: -0.5rem;
+}
+.mainBox .maseger #TopicFive .list li span {
+  right: .4rem;
+}
+.mainBox .maseger .Result {
+  width: 6rem;
+  height: 100%;
+  display: none;
+  margin: auto;
+  position: relative;
+}
+.mainBox .maseger .Result .Template img {
+  display: none;
+}
+.mainBox .maseger .Result .title1 {
+  width: 4rem;
+  margin-left: .6rem;
+  margin-bottom: .1rem;
+}
+.mainBox .maseger .Result .title2 {
+  width: 3rem;
+  height: .6rem;
+  float: right;
+}
+.mainBox .maseger .Result .Computer {
+  width: 4rem;
+  height: 3rem;
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -2.8rem;
+  margin-left: -2rem;
+}
+.mainBox .maseger .Result .Computer img {
+  width: 100%;
+  height: 100%;
+}
+.mainBox .maseger .Result .Anterior4 {
+  height: 3.5rem;
+  margin-top: -3rem;
+}
+.mainBox .maseger .Result .Anterior3 {
+  height: 4rem;
+  margin-top: -3rem;
+}
+.mainBox .maseger .Result .Anterior2 {
+  height: 4rem;
+  margin-top: -3.5rem;
+}
+.mainBox .maseger .Result .Anterior1 {
+  height: 4rem;
+  margin-top: -3.5rem;
+}
+.mainBox .maseger .Result .aperture {
+  width: 6rem;
+  height: 3rem;
+  background: url("../images/note5/aperture.png") no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  bottom: 1.5rem;
+}
+.mainBox .maseger .Result .aperture .Left {
+  width: 3.4rem;
+  height: 2.3rem;
+  float: left;
+  margin-left: .5rem;
+  margin-top: .5rem;
+}
+.mainBox .maseger .Result .aperture .Left .paragraph {
+  width: 2rem;
+  height: .6rem;
+  margin-bottom: .3rem;
+}
+.mainBox .maseger .Result .aperture .Left .Samsung {
+  width: 3rem;
+  height: 1rem;
+}
+.mainBox .maseger .Result .aperture .Right {
+  width: 2rem;
+  height: 2rem;
+  float: right;
+  margin-right: .1rem;
+  margin-top: .5rem;
+}
+.mainBox .maseger .Result .aperture .Right .QRCode {
+  display: block;
+  width: 1.4rem;
+  height: 1.5rem;
+  margin-left: .1rem;
+  margin-bottom: .1rem;
+}
+.mainBox .maseger .Result .aperture .Right .SweepCode {
+  display: block;
+  width: 1.6rem;
+  height: 0.37rem;
+}
+.mainBox .maseger .text {
+  width: 4rem;
+  height: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -2rem;
+  margin-top: -1.5rem;
+  display: none;
+}
+.mainBox .maseger .text img {
+  width: 100%;
+  height: 100%;
+}
+.mainBox .maseger .Jump {
+  position: absolute;
+  bottom: 1rem;
+  display: block;
+  width: 4rem;
+  height: 1.6rem;
+  left: 50%;
+  margin-left: -2rem;
+  opacity: 0;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-user-select: none;
+  -moz-user-focus: none;
+  -moz-user-select: none;
+}
+.mainBox .maseger .Jump img {
+  width: 100%;
+  height: 100%;
+}

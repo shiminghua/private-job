@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>炫龙骑士</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/animate.min.css">
+</head>
+
+<body>
+    <script>
+        ~function () {
+            function componted() {
+                let winW = document.documentElement.clientWidth,
+                    desW = 640;
+                if (winW >= 640) {
+                    document.documentElement.style.fontSize = "100px";
+                    return;
+                }
+                document.documentElement.style.fontSize = winW / desW * 100 + "px";
+            };
+            componted();
+            window.addEventListener("resize", componted, false);
+        }();
+    </script>
+    <main class="mainBox">
+        <section class="loading" id="loading">
+            <div class="circleContainer">
+                <div class="circle1"></div>
+                <div class="circle2"></div>
+                <p class="circleFont">loading</p>
+            </div>
+        </section>
+        <section class="Home" id="Home">
+            <div class="header">
+                <div class="title ">
+                    <img src="./images/title.png" alt="">
+                </div>
+                <div class="logo">
+                    <img src="./images/logo.png" alt="">
+                </div>
+            </div>
+            <div class="center">
+                <img class="top-img" src="./images/top.png" alt="">
+                <img class="buttom-img" src="./images/bottom.png" alt="">
+            </div>
+        </section>
+        <section class="maseger" id="maseger">
+            <div class="header">
+                <div class="title ">
+                    <img src="./images/title.png" alt="">
+                </div>
+                <div class="logo">
+                    <img src="./images/logo.png" alt="">
+                </div>
+            </div>
+            <div class="Article" id="Article">
+                <ul>
+                    <li class="a1">
+                        <p>最初的电竞</p>
+                        <p>是一颗渺小的彗星</p>
+                    </li>
+                    <li class="a1">
+                        <p>在你的内心 惊艳般划过</p>
+                        <p>那是一枚细胞 一束光源 一颗种子</p>
+                        <p>后来它成为了 一整个宇宙</p>
+                    </li>
+                    <li class="a1">
+                        <p>它包含了你的个性标签</p>
+                        <p>你对电竞的那一份独有的热爱</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="start" id="start">
+                <div class="box" id="box">
+                    <img src="./images/start.png" alt="">
+                    <p id="button">开始找寻星系</p>
+                </div>
+            </div>
+
+            <div class="Answer" id="Answer">
+                <h3 class="Topic1">你期待存在怎样的世界?</h3>
+                <ul class="list">
+                    <li data-value='a'><span>无边无际的旷野</span></li>
+                    <li data-value='b'><span>飞速运转的科技</span></li>
+                    <li data-value='c'><span>色彩斑斓的花园</span></li>
+                    <li data-value='d'><span>星空澄澈的草原</span></li>
+                    <li data-value='e'><span>巧夺天工的造物</span></li>
+                </ul>
+            </div>
+            <div class="Answer" id="TopicTwo">
+                <h3 class="Topic1">你意念中的英雄是怎样的？</h3>
+                <ul class="list">
+                    <li data-value='a'><span>巨型泰坦</span></li>
+                    <li data-value='b'><span>疾速刺客</span></li>
+                    <li data-value='c'><span>华服贵族</span></li>
+                    <li data-value='d'><span>冰洁法师</span></li>
+                    <li data-value='e'><span>完美机器</span></li>
+                </ul>
+            </div>
+            <div class="Answer" id="TopicSan">
+                <h3 class="Topic1">你是哪一种风格的玩家？</h3>
+                <ul class="list">
+                    <li data-value='a'><span>视野霸主</span></li>
+                    <li data-value='b'><span>手速达人</span></li>
+                    <li data-value='c'><span>色感大师</span></li>
+                    <li data-value='d'><span>细节控</span></li>
+                    <li data-value='e'><span>器材党</span></li>
+                </ul>
+            </div>
+            <div class="Answer" id="TopicSi">
+                <h3 class="Topic1">你会选择哪一个游戏ID？</h3>
+                <ul class="list">
+                    <li data-value='a'><span>巨兽</span></li>
+                    <li data-value='b'><span>如风</span></li>
+                    <li data-value='c'><span>彩虹</span></li>
+                    <li data-value='d'><span>晴空</span></li>
+                    <li data-value='e'><span>宝器</span></li>
+                </ul>
+            </div>
+            <div class="Answer" id="TopicFive">
+                <h3 class="Topic1">你属于哪一种人设？</h3>
+                <ul class="list">
+                    <li data-value='a'><span>高瞻远瞩 能打能抗</span></li>
+                    <li data-value='b'><span>心思缜密 凡事高效</span></li>
+                    <li data-value='c'><span>脑洞大开 想象出奇</span></li>
+                    <li data-value='d'><span>洞察清晰 有的放矢</span></li>
+                    <li data-value='e'><span>完美主义 不拘一格</span></li>
+                </ul>
+            </div>
+
+            <section class="Result" id="Result5">
+                <div class="Star Template">
+                    <img class="title1" src="./images/note5/title1.png" alt="">
+                    <img class="title2" src="./images/note5/title2.png" alt="">
+                </div>
+                <div class="Computer Template">
+                    <img src="./images/note5/Computer.png" alt="">
+                </div>
+                <div class="aperture">
+                    <div class="Left">
+                        <img class="paragraph" src="./images/note5/paragraph.png" alt="">
+                        <img class="Samsung" src="./images/note5/Samsung.png" alt="">
+                    </div>
+                    <div class="Right">
+                        <img class="QRCode" src="./images/note5/QRCode.png" alt="">
+                        <img class="SweepCode" src="./images/note5/SweepCode.png" alt="">
+                    </div>
+                </div>
+            </section>
+            <section class="Result" id="Result4">
+                <div class="Star Template">
+                    <img class="title1" src="./images/note5/title1.png" alt="">
+                    <img class="title2" src="./images/note4/Heart04.png" alt="">
+                </div>
+                <div class="Computer Anterior4 Template">
+                    <img src="./images/note4/Computer04.png" alt="">
+                </div>
+                <div class="aperture">
+                    <div class="Left">
+                        <img class="paragraph" src="./images/note4/representative04.png" alt="">
+                        <img class="Samsung" src="./images/note4/Samsung04.png" alt="">
+                    </div>
+                    <div class="Right">
+                        <img class="QRCode" src="./images/note5/QRCode.png" alt="">
+                        <img class="SweepCode" src="./images/note5/SweepCode.png" alt="">
+                    </div>
+                </div>
+            </section>
+            <section class="Result" id="Result3">
+                <div class="Star Template">
+                    <img class="title1" src="./images/note5/title1.png" alt="">
+                    <img class="title2" src="./images/note3/Heart03.png" alt="">
+                </div>
+                <div class="Computer Anterior3 Template">
+                    <img src="./images/note3/Computer03.png" alt="">
+                </div>
+                <div class="aperture">
+                    <div class="Left">
+                        <img class="paragraph" src="./images/note3/representative03.png" alt="">
+                        <img class="Samsung" src="./images/note3/Samsung03.png" alt="">
+                    </div>
+                    <div class="Right">
+                        <img class="QRCode" src="./images/note5/QRCode.png" alt="">
+                        <img class="SweepCode" src="./images/note5/SweepCode.png" alt="">
+                    </div>
+                </div>
+            </section>
+            <section class="Result" id="Result2">
+                <div class="Star Template">
+                    <img class="title1" src="./images/note5/title1.png" alt="">
+                    <img class="title2" src="./images/note2/Heart02.png" alt="">
+                </div>
+                <div class="Computer Anterior2 Template">
+                    <img src="./images/note2/Computer02.png" alt="">
+                </div>
+                <div class="aperture">
+                    <div class="Left">
+                        <img class="paragraph" src="./images/note2/representative02.png" alt="">
+                        <img class="Samsung" src="./images/note2/Samsung02.png" alt="">
+                    </div>
+                    <div class="Right">
+                        <img class="QRCode" src="./images/note5/QRCode.png" alt="">
+                        <img class="SweepCode" src="./images/note5/SweepCode.png" alt="">
+                    </div>
+                </div>
+            </section>
+            <section class="Result" id="Result1">
+                <div class="Star Template">
+                    <img class="title1" src="./images/note5/title1.png" alt="">
+                    <img class="title2" src="./images/note1/Heart01.png" alt="">
+                </div>
+                <div class="Computer Anterior1 Template">
+                    <img src="./images/note1/Computer01.png" alt="">
+                </div>
+                <div class="aperture">
+                    <div class="Left">
+                        <img class="paragraph" src="./images/note1/representative01.png" alt="">
+                        <img class="Samsung" src="./images/note1/Samsung01.png" alt="">
+                    </div>
+                    <div class="Right">
+                        <img class="QRCode" src="./images/note5/QRCode.png" alt="">
+                        <img class="SweepCode" src="./images/note5/SweepCode.png" alt="">
+                    </div>
+                </div>
+            </section>
+
+            <section class="text" id="text">
+                <img src="./images/note6/text.png" alt="">
+            </section>
+            <a class="Jump" href="###" id="Jump">
+                <img src="./images/note6/Jump.png" alt="">
+            </a>
+        </section>
+    </main>
+</body>
+<script src="./js/jquery.js"></script>
+<script src="./js/index.js"></script>
+
+</html>
