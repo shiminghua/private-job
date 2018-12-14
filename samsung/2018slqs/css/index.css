@@ -457,7 +457,7 @@ audio {
   left: 82%;
   color: #fff;
   font-size: .22rem;
-  display: none;
+  display: block;
   font-style: normal;
 }
 .mainBox .maseger .text {

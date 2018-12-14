@@ -335,11 +335,8 @@ chooseTopic(function (id, selected) {
     $(id).show();
     $(id + '-img').show();
     $("#arrow").css({ "top": "61%", "left": "79%" }).show();
+    // $("#Result1>.super").css("display", "block");
     $("#maseger").css({ "background-image": "url(./images/note5/bg4.jpg)" });
-    if (id == "#Result1") {
-        $("#Result1>.Preservation").css({ "width": "100%", "right": "0" })
-        $("#Result1>.super").css("display", "block")
-    }
 
     var animate1 = $(id + ">.Template>img");
     var animateArr = ["animated bounceInLeft", "animated bounceInRight", "animated fadeInDown"];
