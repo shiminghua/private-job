@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/animate.min.css">
 </head>
+
 <body>
     <script>
         ~function () {
@@ -44,10 +45,10 @@
         <section class="Home" id="Home">
             <div class="header">
                 <div class="title ">
-                    <img src="./images/title.png" alt="">
+                    <img src="./images/title.png" id='home-title' alt="">
                 </div>
                 <div class="logo">
-                    <img src="./images/logo.png" alt="">
+                    <img src="./images/logo.png" id='home-logo' alt="">
                 </div>
             </div>
             <div class="center">
@@ -64,27 +65,30 @@
                     <img src="./images/logo.png" alt="">
                 </div>
             </div>
-            <div class="Article" id="Article">
-                <ul class="B">
-                    <li class="a1">
-                        <p>最初的电竞</p>
-                        <p>是一颗渺小的彗星</p>
-                    </li>
-                    <li class="a1">
-                        <p>在你的内心 惊艳般划过</p>
-                        <p>那是一枚细胞 一束光源 一颗种子</p>
-                        <p>后来它成为了 一整个宇宙</p>
-                    </li>
-                    <li class="a1">
-                        <p>它包含了你的个性标签</p>
-                        <p>你对电竞的那一份独有的热爱</p>
-                    </li>
-                </ul>
-            </div>
-            <div class="start" id="start">
-                <div class="box" id="box">
-                    <img src="./images/start.png" alt="">
-                    <p id="button">开始找寻星系</p>
+
+            <div id='article-box' style="display: none;">
+                <div class="Article" id="Article">
+                    <ul class="B" id='article-ul'>
+                        <li class="a1">
+                            <p>最初的电竞</p>
+                            <p>是一颗渺小的彗星</p>
+                        </li>
+                        <li class="a1">
+                            <p>在你的内心 惊艳般划过</p>
+                            <p>那是一枚细胞 一束光源 一颗种子</p>
+                            <p>后来它成为了 一整个宇宙</p>
+                        </li>
+                        <li class="a1">
+                            <p>它包含了你的个性标签</p>
+                            <p>你对电竞的那一份独有的热爱</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="start" id="start">
+                    <div class="box" id="box">
+                        <img src="./images/start.png" alt="">
+                        <p id="button">开始找寻星系</p>
+                    </div>
                 </div>
             </div>
 
@@ -263,4 +267,5 @@
 <script src="./js/touch.min.js"></script>
 <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 <script src="./js/index.js"></script>
+
 </html>
