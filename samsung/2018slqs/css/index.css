@@ -358,6 +358,7 @@ audio {
   width: 3rem;
   height: .6rem;
   float: right;
+  margin-right: .6rem;
 }
 .mainBox .maseger .Result .Computer {
   width: 100%;
