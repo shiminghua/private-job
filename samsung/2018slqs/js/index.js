@@ -1,5 +1,5 @@
 
-~function(){
+~function () {
     var $music = $('.icon-music-outer');
     var $forbid = $music.find('.forbid');
     var audio = document.getElementById('bgMusic');
@@ -69,6 +69,7 @@ function imagesIsAllLoaded(imgArr, callback) {
 function First() {
     $("#Home>.header>.title>img").addClass("animated bounceInLeft");
     $("#Home>.header>.logo>img").addClass("animated bounceInRight");
+    $("#arrow").css({ "left": "0", "top": "27%", "right": "0", "bottom": "0", "margin": "auto" })
     setTimeout(function () {
         $("#Home>.center").css("display", "block");
         $("#Home>.center>img").eq(0).addClass("animated zoomInDown");
@@ -79,24 +80,24 @@ function First() {
 
 $("#Home").on("click", function () {
     this.style.display = "none";
-        $("#arrow").css("display", "none")
-        var myTest = $('#maseger'), pItems = myTest.find('.B');
-        pItems.eq(0).animate({ height: "3rem" }, 5000, function () {
-            $("#start").animate({ opacity: 1 }, 600);
-            $("#button").on("click", function () {
-                $("#box").css("display", "none")
-                $("#Article").css("display", "none");
-                $("#start").css("display", "none");
-                $("#maseger").css({ "background-image": "url(./images/bg3.jpg)" });
-                $("#Answer").css("display", "block");
-                var listLength = $("#Answer li").length;
-                for (let i = 0; i < listLength; i++) {
-                    setInterval(() => {
-                        $("#Answer li").eq(i).addClass("animated bounceInRight").css("display", "block")
-                    }, i * 300)
-                }
-            })
-        });
+    $("#arrow").css({ "display": "none", "left": "50%", "top": "97%", "margin": "unset" })
+    var myTest = $('#maseger'), pItems = myTest.find('.B');
+    pItems.eq(0).animate({ height: "3rem" }, 5000, function () {
+        $("#start").animate({ opacity: 1 }, 600);
+        $("#button").on("click", function () {
+            $("#box").css("display", "none")
+            $("#Article").css("display", "none");
+            $("#start").css("display", "none");
+            $("#maseger").css({ "background-image": "url(./images/bg3.jpg)" });
+            $("#Answer").css("display", "block");
+            var listLength = $("#Answer li").length;
+            for (let i = 0; i < listLength; i++) {
+                setInterval(() => {
+                    $("#Answer li").eq(i).addClass("animated bounceInRight").css("display", "block")
+                }, i * 300)
+            }
+        })
+    });
 
 });
 $("#arrow").on("click", function () {
@@ -112,10 +113,13 @@ $("#arrow").on("click", function () {
             $("#maseger").css({ "background-image": "url(./images/bg3.jpg)" });
             $("#Answer").css("display", "block");
             var listLength = $("#Answer li").length;
+            console.length(listLength)
             for (let i = 0; i < listLength; i++) {
+                var item = listLength[i];
                 setInterval(() => {
                     $("#Answer li").eq(i).addClass("animated bounceInRight").css("display", "block")
                 }, i * 300)
+                debugger
             }
         })
     });
@@ -263,6 +267,12 @@ chooseTopic(function (id, selected) {
     $(id).show();
     $(id + '-img').show();
     $("#maseger").css({ "background-image": "url(./images/note5/bg4.jpg)" });
+    if (id == "#Result1") {
+        $("#Result1>.Preservation").css({ "width": "100%", "right": "0" })
+        $("#arrow").css({ "top": "63%", "left": "73%" })
+        $("#Result1>.super").css("display", "block")
+    }
+
     let animate1 = $(id + ">.Template>img");
     let animateArr = ["animated bounceInLeft", "animated bounceInRight", "animated fadeInDown"];
     for (let i = 0, len = animate1.length; i < len; i++) {
@@ -288,3 +298,98 @@ chooseTopic(function (id, selected) {
         $(".Result span").css("display", "block");
     }, 1000)
 });
+
+function initWxSdk() {
+    var shareTitle = "寻找属于你的电竞星系";
+    var shareUrl = window.location.href;
+    var shareDesc = "你是哪一种电竞星系？";
+    var shareImg = "http://www.h5app.com.cn/samsung/story1/share.png";
+    $.ajax({
+        type: 'GET', //GET
+        url: "//www.h5app.com.cn/wxapi/getInitInfo.php?reqUrl=" + encodeURIComponent(window.location.href),
+        async: false,
+        dataType: 'json',
+        success: function (data, textStatus, jqXHR) {
+
+            wx.config({
+                debug: false,
+                appId: data.appid,
+                timestamp: data.timestamp,
+                nonceStr: data.nonceStr,
+                signature: data.signature,
+                jsApiList: [
+                    "onMenuShareTimeline", "onMenuShareAppMessage", "onMenuShareQQ", "onMenuShareWeibo", "onMenuShareQZone"
+                    // 所有要调用的 API 都要加到这个列表中
+                ]
+            });
+            wx.ready(function () {
+                //alert("wx ready ok");
+                wx.onMenuShareTimeline({
+                    title: shareTitle, // 分享标题
+                    link: shareUrl, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+                    imgUrl: shareImg, // 分享图标
+                    success: function () {
+                        // 用户确认分享后执行的回调函数
+                    },
+                    cancel: function () {
+                        // 用户取消分享后执行的回调函数
+                    }
+                });
+                wx.onMenuShareAppMessage({
+                    title: shareTitle, // 分享标题
+                    desc: shareDesc, // 分享描述
+                    link: shareUrl, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+                    imgUrl: shareImg, // 分享图标
+                    type: 'link', // 分享类型,music、video或link，不填默认为link
+                    dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+                    success: function () {
+                        // 用户确认分享后执行的回调函数
+                    },
+                    cancel: function () {
+                        // 用户取消分享后执行的回调函数
+                    }
+                });
+                wx.onMenuShareQQ({
+                    title: shareTitle, // 分享标题
+                    desc: shareDesc, // 分享描述
+                    link: shareUrl, // 分享链接
+                    imgUrl: shareImg, // 分享图标
+                    success: function () {
+                        // 用户确认分享后执行的回调函数
+                    },
+                    cancel: function () {
+                        // 用户取消分享后执行的回调函数
+                    }
+                });
+
+                wx.onMenuShareWeibo({
+                    title: shareTitle, // 分享标题
+                    desc: shareDesc, // 分享描述
+                    link: shareUrl, // 分享链接
+                    imgUrl: shareImg, // 分享图标
+                    success: function () {
+                        // 用户确认分享后执行的回调函数
+                    },
+                    cancel: function () {
+                        // 用户取消分享后执行的回调函数
+                    }
+                });
+
+                wx.onMenuShareQZone({
+                    title: shareTitle, // 分享标题
+                    desc: shareDesc, // 分享描述
+                    link: shareUrl, // 分享链接
+                    imgUrl: shareImg, // 分享图标
+                    success: function () {
+                        // 用户确认分享后执行的回调函数
+                    },
+                    cancel: function () {
+                        // 用户取消分享后执行的回调函数
+                    }
+                });
+            });
+        }
+    });
+}
+
+initWxSdk();
