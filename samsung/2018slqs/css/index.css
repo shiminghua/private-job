@@ -364,25 +364,26 @@ audio {
   margin: auto;
   position: absolute;
   left: 0;
+  top: 50%;
 }
 .mainBox .maseger .Result .Computer img {
   width: 100%;
   height: 100%;
 }
 .mainBox .maseger .Result .Anterior5 {
-  top: 3.4rem;
+  margin-top: -3.3rem;
 }
 .mainBox .maseger .Result .Anterior4 {
-  top: 3.6rem;
+  margin-top: -3.3rem;
 }
 .mainBox .maseger .Result .Anterior3 {
-  top: 3.2rem;
+  margin-top: -3.8rem;
 }
 .mainBox .maseger .Result .Anterior2 {
-  top: 3.45rem;
+  margin-top: -3.3rem;
 }
 .mainBox .maseger .Result .Anterior1 {
-  top: 3.65rem;
+  margin-top: -3.3rem;
 }
 .mainBox .maseger .Result .aperture {
   width: 6rem;
@@ -391,6 +392,8 @@ audio {
   background-size: 100% 100%;
   position: absolute;
   bottom: 1.5rem;
+  left: 50%;
+  margin-left: -3rem;
 }
 .mainBox .maseger .Result .aperture .Left {
   width: 3.4rem;
