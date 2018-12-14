@@ -360,42 +360,29 @@ audio {
   float: right;
 }
 .mainBox .maseger .Result .Computer {
-  width: 5rem;
-  height: 3.3rem;
+  width: 100%;
   margin: auto;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-top: -2.8rem;
-  margin-left: -2.5rem;
+  left: 0;
 }
 .mainBox .maseger .Result .Computer img {
   width: 100%;
   height: 100%;
 }
+.mainBox .maseger .Result .Anterior5 {
+  top: 3.4rem;
+}
 .mainBox .maseger .Result .Anterior4 {
-  width: 5rem;
-  height: 3.8rem;
-  margin-top: -3rem;
-  margin-left: -2.5rem;
+  top: 3.6rem;
 }
 .mainBox .maseger .Result .Anterior3 {
-  width: 4.3rem;
-  height: 4.2rem;
-  margin-top: -3.3rem;
-  margin-left: -2.1rem;
+  top: 3.2rem;
 }
 .mainBox .maseger .Result .Anterior2 {
-  width: 4.6rem;
-  height: 3.5rem;
-  margin-top: -3rem;
-  margin-left: -2.3rem;
+  top: 3.45rem;
 }
 .mainBox .maseger .Result .Anterior1 {
-  width: 4.3rem;
-  height: 3.5rem;
-  margin-top: -3rem;
-  margin-left: -2.15rem;
+  top: 3.65rem;
 }
 .mainBox .maseger .Result .aperture {
   width: 6rem;
