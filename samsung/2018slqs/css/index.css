@@ -507,10 +507,10 @@ audio {
   display: none;
   width: 6.7%;
   position: absolute;
-  left: 50%;
+  left: 61%;
   margin-left: -3.35%;
   z-index: 10;
-  top: 110%;
+  top: 79%;
   opacity: 0;
   -webkit-animation: audio_anim 1.5s linear 0s infinite alternate;
 }

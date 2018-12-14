@@ -168,9 +168,6 @@ $(document).ready(function () {
     initWxSdk();
 });
 
-
-
-
 // $("#arrow").on("click", function () {
 //     $("#Home").css("display", "none");
 //     this.style.display = "none";
@@ -333,7 +330,7 @@ function chooseTopic(callback) {
 }
 
 chooseTopic(function (id, selected) {
-    $("#arrow").css("display", "block")
+    // $("#arrow").css("display", "block")
     console.log('----', id, selected);
     $(id).show();
     $(id + '-img').show();
