@@ -248,7 +248,7 @@ audio {
   font-size: .22rem;
   color: #ffffff;
 }
-.mainBox .maseger #start {
+#start {
   width: 3rem;
   height: 2rem;
   position: absolute;
@@ -257,23 +257,23 @@ audio {
   margin-left: -1.5rem;
   opacity: 0 ;
 }
-.mainBox .maseger #start .box {
+#start .box {
   width: 3rem;
   height: 2rem;
   position: relative;
 }
-.mainBox .maseger #start .box img {
+#start .box img {
   width: 100%;
   height: 100%;
 }
-.mainBox .maseger #start .box p {
+#start .box p {
   margin-top: -1.4rem;
   text-align: center;
   color: #aa8563;
   font-size: .22rem;
   transform: rotate(-5deg);
 }
-.mainBox .maseger .Answer {
+.Answer {
   width: 6rem;
   height: 5rem;
   position: absolute;
@@ -285,58 +285,78 @@ audio {
   text-align: center;
   display: none;
 }
-.mainBox .maseger .Answer .Topic1 {
+.Answer .Topic1 {
   text-align: center;
   font-weight: 300;
   font-size: .4rem;
   color: #fff;
 }
-.mainBox .maseger .Answer .list {
+.Answer .list {
   width: 4rem;
   margin: .2rem auto;
 }
-.mainBox .maseger .Answer .list li {
+.Answer .list li {
   height: 1rem;
   text-align: center;
   position: relative;
   display: none;
 }
-.mainBox .maseger .Answer .list li span {
+.Answer .list li span {
   font-size: .32rem;
   line-height: 1rem;
   color: #fff;
   position: absolute;
   right: .7rem;
 }
-.mainBox .maseger .Answer .list li:nth-child(1) {
-  background: url("../images/a.png") no-repeat;
+/* .Answer .list li:nth-child(1) {
+  background: url("../images/a.png") no-repeat center center;
   background-size: 100% 100%;
 }
-.mainBox .maseger .Answer .list li:nth-child(2) {
+.Answer .list li:nth-child(2) {
   background: url("../images/b.png") no-repeat;
   background-size: 100% 100%;
 }
-.mainBox .maseger .Answer .list li:nth-child(3) {
+.Answer .list li:nth-child(3) {
   background: url("../images/c.png") no-repeat;
   background-size: 100% 100%;
 }
-.mainBox .maseger .Answer .list li:nth-child(4) {
+.Answer .list li:nth-child(4) {
   background: url("../images/d.png") no-repeat;
   background-size: 100% 100%;
 }
-.mainBox .maseger .Answer .list li:nth-child(5) {
+.Answer .list li:nth-child(5) {
+  background: url("../images/e.png") no-repeat;
+  background-size: 100% 100%;
+} */
+.Answer .list li.child1 {
+  background: url("../images/a.png") no-repeat center center;
+  background-size: 100% 100%;
+}
+.Answer .list li.child2 {
+  background: url("../images/b.png") no-repeat;
+  background-size: 100% 100%;
+}
+.Answer .list li.child3 {
+  background: url("../images/c.png") no-repeat;
+  background-size: 100% 100%;
+}
+.Answer .list li.child4 {
+  background: url("../images/d.png") no-repeat;
+  background-size: 100% 100%;
+}
+.Answer .list li.child5 {
   background: url("../images/e.png") no-repeat;
   background-size: 100% 100%;
 }
-.mainBox .maseger #TopicTwo .list li span,
-.mainBox .maseger #TopicSan .list li span,
-.mainBox .maseger #TopicSan .list li span {
+#TopicTwo .list li span,
+#TopicSan .list li span,
+#TopicSan .list li span {
   left: .2rem;
 }
-.mainBox .maseger #TopicSi .list li span {
+#TopicSi .list li span {
   left: -0.5rem;
 }
-.mainBox .maseger #TopicFive .list li span {
+#TopicFive .list li span {
   right: .4rem;
 }
 .mainBox .maseger .Result {
