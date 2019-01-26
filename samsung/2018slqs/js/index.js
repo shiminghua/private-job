@@ -101,7 +101,7 @@ function showAnswers() {
         $articleBox.hide();
         $answer.show();
         $answer.find('li').each(function (index, item) {
-            setInterval(function () {
+            setTimeout(function () {
                 $(item).addClass("animated bounceInRight").css("display", "block")
             }, index * 300)
         });
@@ -120,7 +120,7 @@ function answersAnimate() {
         $answer.hide();
         $TopicTwo.show();
         $TopicTwo.find('li').each(function (index, item) {
-            setInterval(function () {
+            setTimeout(function () {
                 $(item).addClass("animated bounceInRight").css("display", "block")
             }, index * 300)
         });
@@ -130,7 +130,7 @@ function answersAnimate() {
         $TopicTwo.hide();
         $TopicSan.show();
         $TopicSan.find('li').each(function (index, item) {
-            setInterval(function () {
+            setTimeout(function () {
                 $(item).addClass("animated bounceInRight").css("display", "block")
             }, index * 300)
         });
@@ -140,7 +140,7 @@ function answersAnimate() {
         $TopicSan.hide();
         $TopicSi.show();
         $TopicSi.find('li').each(function (index, item) {
-            setInterval(function () {
+            setTimeout(function () {
                 $(item).addClass("animated bounceInRight").css("display", "block")
             }, index * 300)
         });
@@ -150,7 +150,7 @@ function answersAnimate() {
         $TopicSi.hide();
         $TopicFive.show();
         $TopicFive.find('li').each(function (index, item) {
-            setInterval(function () {
+            setTimeout(function () {
                 $(item).addClass("animated bounceInRight").css("display", "block")
             }, index * 300)
         });
@@ -184,7 +184,7 @@ $(document).ready(function () {
 //             console.length(listLength)
 //             for (var i = 0; i < listLength; i++) {
 //                 var item = listLength[i];
-//                 setInterval(function () {
+//                 setTimeout(function () {
 //                     $("#Answer li").eq(i).addClass("animated bounceInRight").css("display", "block")
 //                 }, i * 300)
 //                 // debugger
@@ -197,7 +197,7 @@ $(document).ready(function () {
 //     $("#TopicTwo").css({ "display": "block" })
 //     var listLength = $("#TopicTwo li").length;
 //     for (var i = 0; i < listLength; i++) {
-//         setInterval(function () {
+//         setTimeout(function () {
 //             $("#TopicTwo li").eq(i).addClass("animated bounceInRight").css("display", "block")
 //         }, i * 300)
 //     }
@@ -208,7 +208,7 @@ $(document).ready(function () {
 //     $("#TopicSan").css({ "display": "block" })
 //     var listLength = $("#TopicSan li").length;
 //     for (var i = 0; i < listLength; i++) {
-//         setInterval(function () {
+//         setTimeout(function () {
 //             $("#TopicSan li").eq(i).addClass("animated bounceInRight").css("display", "block")
 //         }, i * 300)
 //     }
@@ -219,7 +219,7 @@ $(document).ready(function () {
 //     $("#TopicSi").css({ "display": "block" })
 //     var listLength = $("#TopicSan li").length;
 //     for (var i = 0; i < listLength; i++) {
-//         setInterval(function () {
+//         setTimeout(function () {
 //             $("#TopicSi li").eq(i).addClass("animated bounceInRight").css("display", "block")
 //         }, i * 300)
 //     }
@@ -230,7 +230,7 @@ $(document).ready(function () {
 //     $("#TopicFive").css({ "display": "block" })
 //     var listLength = $("#TopicFive li").length;
 //     for (var i = 0; i < listLength; i++) {
-//         setInterval(function () {
+//         setTimeout(function () {
 //             $("#TopicFive li").eq(i).addClass("animated bounceInRight").css("display", "block")
 //         }, i * 300)
 //     }
@@ -332,34 +332,37 @@ function chooseTopic(callback) {
 chooseTopic(function (id, selected) {
     // $("#arrow").css("display", "block")
     console.log('----', id, selected);
+    $('#TopicFive').hide();
     $(id).show();
     $(id + '-img').show();
     $("#arrow").css({ "top": "61%", "left": "79%" }).show();
+    $(id).find('.title1').addClass('animated zoomInLeft').show();
+    $(id).find('.title2').addClass('animated zoomInRight').show();
     // $("#Result1>.super").css("display", "block");
     $("#maseger").css({ "background-image": "url(./images/note5/bg4.jpg)" });
 
     var animate1 = $(id + ">.Template>img");
     var animateArr = ["animated bounceInLeft", "animated bounceInRight", "animated fadeInDown"];
     for (var i = 0, len = animate1.length; i < len; i++) {
-        setInterval(function () {
+        setTimeout(function () {
             animate1.eq(i).addClass(animateArr[i]).css("display", "block");
         }, i * 500);
     }
     var LeftLength = $(id + ">.aperture>.Left>img").length;
     for (var i = 0; i < LeftLength; i++) {
-        setInterval(function () {
+        setTimeout(function () {
             $(id + ">.aperture>.Left>img").eq(0).addClass("animated rotateInDownLeft").css("display", "block");
             $(id + ">.aperture>.Left>img").eq(1).addClass("animated rotateInDownRight").css("display", "block");
         }, i * 500)
     }
     var RightLength = $(id + ">.aperture>.Right>img").length;
     for (var i = 0; i < RightLength; i++) {
-        setInterval(function () {
+        setTimeout(function () {
             $(id + ">.aperture>.Right>img").eq(0).addClass("animated flip").css("display", "block");
             $(id + ">.aperture>.Right>img").eq(1).addClass("animated rotateInUpRight").css("display", "block");
         }, i * 500)
     }
-    setInterval(function () {
+    setTimeout(function () {
         $(".Result span").css("display", "block");
     }, 1000)
 });
