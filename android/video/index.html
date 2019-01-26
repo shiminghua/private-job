@@ -27,7 +27,7 @@
       text-align: center;
       font-size: 30px;
       line-height: 100px;
-      display: none;
+      /* display: none; */
     }
   </style>
   <script type="text/javascript" src="http://jsmpeg.com/jsmpeg.min.js"></script>
@@ -50,21 +50,21 @@
         loop: false
       });
 
-    // Jbtn.onclick=function(){
-    //   if (!flag) {
-    //     Jbtn.innerHTML = '暂停'
-    //     flag = true;
-    //     player.play()
-    //   }else{
-    //     Jbtn.innerHTML = '播放'
-    //     flag = false;
-    //     player.pause()
-    //   }
-    // }
+    Jbtn.onclick=function(){
+      if (!flag) {
+        Jbtn.innerHTML = '暂停'
+        flag = true;
+        player.play()
+      }else{
+        Jbtn.innerHTML = '播放'
+        flag = false;
+        player.pause()
+      }
+    }
 
-    setTimeout(function () {
-      player.play()
-    }, 2000)
+    // setTimeout(function () {
+    //   player.play()
+    // }, 2000)
 
   </script>
 </body>
