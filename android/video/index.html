@@ -28,6 +28,16 @@
       font-size: 30px;
       line-height: 100px;
       /* display: none; */
+      z-index: 1000;
+    }
+
+    #video-canvas {
+      position: absolute;
+      left: 0;
+      top: 100px;
+      z-index: 100;
+      width: 100%;
+      height: 200px;
     }
   </style>
   <script type="text/javascript" src="http://jsmpeg.com/jsmpeg.min.js"></script>
@@ -35,7 +45,7 @@
 
 <body id="content">
   <div class="btn" id="Jbtn">按钮</div>
-  <canvas id="video-canvas" width="100%" height="50%"></canvas>
+  <canvas id="video-canvas" ></canvas>
   <!-- <div class="jsmpeg" data-url="video/video.ts"></div> -->
   <script type="text/javascript">
     document.getElementById('content').addEventListener("touchmove", function (e) {
